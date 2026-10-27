@@ -1,0 +1,60 @@
+/* ==========================================================================
+   1. ESTILO DEL BOTÓN (TRAMPA)
+   ========================================================================== */
+.btn-moderno {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Cambio instantáneo a fondo blanco al hacer clic */
+.btn-moderno.clicado {
+  background-color: #ffffff !important;
+  color: #ffffff !important; /* Oculta el texto poniéndolo blanco */
+  border-color: #ffffff !important;
+  cursor: default;
+}
+
+/* ==========================================================================
+   2. CONTENEDOR DEL SCREAMER (PANTALLA COMPLETA NEGRA)
+   ========================================================================== */
+.screamer-oculto {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff; /* Fondo negro de fondo */
+  z-index: 99999; /* Por encima de todo */
+}
+
+/* Se activa mediante JavaScript */
+.screamer-oculto.activado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================================================================
+   3. IMAGEN ADAPTABLE (RESPONSIVE)
+   ========================================================================== */
+.screamer-imagen {
+  /* Controla el tamaño máximo para que no se estire de más */
+  max-width: 90%; 
+  max-height: 90vh;
+  
+  /* Mantiene la proporción original de descarga.jpg en cualquier pantalla */
+  width: auto;
+  height: auto;
+  object-fit: contain; 
+  
+  /* Opcional: añade un ligero borde o sombra si quieres separarla del fondo negro */
+  border-radius: 4px; 
+}
